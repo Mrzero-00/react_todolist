@@ -3,22 +3,7 @@ import React, { useReducer, createContext, useContext, useRef } from 'react';
 const initdata = [
   {
     id: 1,
-    text: '1번할일',
-    done: true,
-  },
-  {
-    id: 2,
-    text: '2번할일',
-    done: true,
-  },
-  {
-    id: 3,
-    text: '3번할일',
-    done: true,
-  },
-  {
-    id: 4,
-    text: '4번할일',
+    text: '공부하기',
     done: false,
   },
 ];
@@ -44,7 +29,7 @@ const Todonextid = createContext();
 
 export function TodoProvider({ children }) {
   const [state, dispatch] = useReducer(todoReducer, initdata);
-  const nextid = useRef(5);
+  const nextid = useRef(2);
   return (
     <TodostateContext.Provider value={state}>
       <TododipatchConstext.Provider value={dispatch}>

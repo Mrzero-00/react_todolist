@@ -37,7 +37,7 @@ function TodolistHead() {
   const dayday = today.toLocaleDateString('ko-KR', {
     weekday: 'long',
   });
-  const count = count_todo.filter((todo) => todo.done === true).length;
+  const count = count_todo.filter((todo) => todo.done === false).length;
 
   return (
     <HeadBlock>

@@ -83,7 +83,6 @@ function TodoCreate() {
 
   const Inputer = (e) => {
     settodotext(e.target.value);
-    console.log(todotext);
   };
 
   const submit = (e) => {
@@ -91,6 +90,7 @@ function TodoCreate() {
     const newtodotext = {
       id: nextid.current,
       text: todotext,
+      done: false,
     };
     newtodo({
       type: 'Create',
